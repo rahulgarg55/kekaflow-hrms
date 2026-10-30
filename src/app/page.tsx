@@ -9,6 +9,7 @@ import { LeaveView } from '../components/LeaveView';
 import { PayrollView } from '../components/PayrollView';
 import { DirectoryView } from '../components/DirectoryView';
 import { ApprovalsView } from '../components/ApprovalsView';
+import { WorkflowBuilderView } from '../components/WorkflowBuilderView';
 
 export default function HomePage() {
   const [currentTab, setCurrentTab] = useState<NavigationTab>('dashboard');
@@ -113,6 +114,8 @@ export default function HomePage() {
           {currentTab === 'approvals' && (
             <ApprovalsView onUpdatePendingCount={setPendingApprovalsCount} />
           )}
+
+          {currentTab === 'workflows' && <WorkflowBuilderView />}
         </main>
       </div>
     </div>

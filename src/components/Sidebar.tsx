@@ -13,6 +13,7 @@ import {
   ChevronRight,
   LogOut,
   Building2,
+  GitBranch,
 } from 'lucide-react';
 import { CURRENT_USER } from '../data/mockData';
 
@@ -22,7 +23,8 @@ export type NavigationTab =
   | 'leaves'
   | 'payroll'
   | 'directory'
-  | 'approvals';
+  | 'approvals'
+  | 'workflows';
 
 interface SidebarProps {
   currentTab: NavigationTab;
@@ -69,6 +71,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
       label: 'Team Directory',
       icon: Users,
       badge: '10+',
+    },
+    {
+      id: 'workflows' as NavigationTab,
+      label: 'Workflow Studio',
+      icon: GitBranch,
+      badge: 'Visual No-Code',
+      badgeColor: 'bg-purple-100 text-[#5c3ba2]',
     },
     {
       id: 'approvals' as NavigationTab,

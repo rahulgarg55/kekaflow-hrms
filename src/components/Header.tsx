@@ -91,6 +91,10 @@ export const Header: React.FC<HeaderProps> = ({
       title: 'HR Operations & Approvals Inbox',
       subtitle: 'Review pending leave requests, attendance regularization, and team claims',
     },
+    workflows: {
+      title: 'No-Code Workflow Studio & State Machine Builder',
+      subtitle: 'Design visual approval trees, safe AST condition rules, and automated API actions',
+    },
   };
 
   const { title, subtitle } = titles[currentTab];
