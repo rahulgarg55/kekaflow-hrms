@@ -1,0 +1,130 @@
+@import 'tailwindcss';
+
+:root {
+  --keka-purple: #5c3ba2;
+  --keka-purple-hover: #4e308f;
+  --keka-purple-light: #f5f2fd;
+  --keka-purple-border: #e9e2f9;
+  --keka-indigo: #4338ca;
+  --keka-bg: #f8fafc;
+  --keka-card: #ffffff;
+  --keka-border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Card hover elevations */
+.keka-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.keka-card:hover {
+  box-shadow: 0 4px 12px 0 rgba(92, 59, 162, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Keka branded button */
+.btn-keka-primary {
+  background: linear-gradient(135deg, #5c3ba2 0%, #4f2e96 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(92, 59, 162, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-keka-primary:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(92, 59, 162, 0.35);
+}
+
+.btn-keka-primary:active {
+  transform: translateY(0);
+}
+
+/* Attendance Status Badges */
+.badge-present {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-wfh {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-late {
+  background-color: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-leave {
+  background-color: #f5f3ff;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+}
+
+.badge-holiday {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.badge-weekend {
+  background-color: #f8fafc;
+  color: #94a3b8;
+  border: 1px solid #e2e8f0;
+}
+
+/* Print Styles for Official Payslip */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-payslip, #printable-payslip * {
+    visibility: visible;
+  }
+  #printable-payslip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
