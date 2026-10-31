@@ -10,6 +10,7 @@ import { PayrollView } from '../components/PayrollView';
 import { DirectoryView } from '../components/DirectoryView';
 import { ApprovalsView } from '../components/ApprovalsView';
 import { WorkflowBuilderView } from '../components/WorkflowBuilderView';
+import { HiringView } from '../components/HiringView';
 
 export default function HomePage() {
   const [currentTab, setCurrentTab] = useState<NavigationTab>('dashboard');
@@ -94,6 +95,8 @@ export default function HomePage() {
               }}
             />
           )}
+
+          {currentTab === 'hiring' && <HiringView />}
 
           {currentTab === 'attendance' && <AttendanceView />}
 

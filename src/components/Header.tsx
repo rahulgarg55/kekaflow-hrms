@@ -71,6 +71,10 @@ export const Header: React.FC<HeaderProps> = ({
       title: 'Employee Dashboard & Shift Time',
       subtitle: 'Overview of work hours, attendance compliance, and team updates',
     },
+    hiring: {
+      title: 'Hire & ATS Candidate Pipeline',
+      subtitle: 'Manage job requisitions, candidate Kanban stages, scorecards, and offers',
+    },
     attendance: {
       title: 'Attendance & Punch Records',
       subtitle: 'Daily biometric web check-in logs and regularization workflow',

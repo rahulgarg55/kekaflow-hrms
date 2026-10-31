@@ -14,11 +14,13 @@ import {
   LogOut,
   Building2,
   GitBranch,
+  Briefcase,
 } from 'lucide-react';
 import { CURRENT_USER } from '../data/mockData';
 
 export type NavigationTab =
   | 'dashboard'
+  | 'hiring'
   | 'attendance'
   | 'leaves'
   | 'payroll'
@@ -47,6 +49,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
       label: 'Home & Clock-In',
       icon: LayoutDashboard,
       badge: null,
+    },
+    {
+      id: 'hiring' as NavigationTab,
+      label: 'Hire & ATS',
+      icon: Briefcase,
+      badge: '4 Active',
+      badgeColor: 'bg-purple-100 text-[#5c3ba2] font-bold',
     },
     {
       id: 'attendance' as NavigationTab,
